@@ -14,7 +14,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: |
-          r=$(echo ${{ github.event.inputs.test_string }} | grep -iPo 'https?://.+?/repos?/\K.+?/[^\/]+')
+          r=$(echo ${{ github.event.inputs.test_string }} | grep -iPo 'https?://.+?/repos?/\K.+?/[^\/]+' || true)
           echo $r
       - run: mkdir dl
       - run: |
