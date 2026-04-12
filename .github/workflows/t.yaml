@@ -9,5 +9,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: mkdir dl
-      - run: cd dl
-      - run: pwd
+      - run: |
+          set -x
+          cd dl
+          cd -
+          pwd
+      # - run: pwd
