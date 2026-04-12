@@ -23,4 +23,6 @@ jobs:
           pwd
           # cd -
           # pwd
-      # - run: cd dl
+      - run: |
+          pwd
+          cd dl
