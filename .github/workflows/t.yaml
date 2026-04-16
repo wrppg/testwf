@@ -8,11 +8,14 @@ on:
         description: 'test input string'
         required: false
         type: string
+        default: 'test-input-string'
   
 jobs:
   t_1:
     runs-on: ubuntu-latest
     steps:
+      - run: |
+          echo a-"${{ github.event.inputs.test_string }}"
       - run: |
           r=$(echo ${{ github.event.inputs.test_string }} | grep -iPo 'https?://.+?/repos?/\K.+?/[^\/]+' || true)
           echo $r
