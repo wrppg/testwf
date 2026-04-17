@@ -8,7 +8,7 @@ on:
         description: 'test input string'
         required: false
         type: string
-        default: 'test-input-string'
+        default: 'https://api.github.com/repos/ZZZ/000/releases/310115652'
   
 jobs:
   t_1:
