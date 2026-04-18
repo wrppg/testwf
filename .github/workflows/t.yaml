@@ -20,7 +20,7 @@ jobs:
           r=$(echo ${{ github.event.inputs.test_string }} | grep -iPo 'https?://.+?/repos?/\K.+?/[^\/]+' || true)
           echo "TEST_ENV=$r" >> $GITHUB_ENV
           echo $r
-      - name: ${{ github.env.TEST_ENV }}
+      - name: ${{ github.env.TEST_ENV }} - ${{ env.TEST_ENV }}
         run: echo $TEST_ENV
       - run: mkdir dl
       - run: |
