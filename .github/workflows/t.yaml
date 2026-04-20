@@ -19,6 +19,7 @@ jobs:
           repository: 'zacharee/RootActivityLauncher'
           ref: 'master'
       - run: |
+          ls
           pwd
           git status
           
