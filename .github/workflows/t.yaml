@@ -18,6 +18,7 @@ jobs:
         with:
           repository: 'zacharee/RootActivityLauncher'
           ref: 'master'
+          fetch-depth: 0
       - run: |
           ls
           pwd
