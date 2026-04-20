@@ -14,6 +14,14 @@ jobs:
   t_1:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v6
+        with:
+          repository: 'zacharee/RootActivityLauncher'
+          ref: 'master'
+      - run: |
+          pwd
+          git status
+          
       - run: |
           echo a-"${{ github.event.inputs.test_string }}"
       - run: |
